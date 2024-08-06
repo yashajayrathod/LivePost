@@ -1,0 +1,15 @@
+<h1>{{ post?.title }}</h1>
+<p>
+  {{ post?.description }}
+  <img src="{{ post?.imagePath }}" alt="nature " class="img-responsive" />
+</p>
+
+<p>Author:{{ post?.author }}</p>
+<p>Date:{{ post?.datetimeCreated | date}}</p>
+
+<button type="button" (click)="likePost()" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-thumbs-up"></span> Like {{ post?.numberOfLikes }}
+</button>
+<br><br>
+<button class="btn btn-success" (click)="onEdit()">Edit</button>  |
+<button class="btn btn-danger" (click)="onDelete()">Delete</button>
